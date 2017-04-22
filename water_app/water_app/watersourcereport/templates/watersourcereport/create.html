@@ -1,0 +1,43 @@
+<h1>Create Water Source Report</h1>
+
+{% if error %}
+{{ error }}
+<br />
+<br />
+{% endif %}
+
+<form method="POST" action="{% url 'watersourcereport:create' %}">
+	{% csrf_token %}
+
+	Date and Time
+	<br />
+	<input type="dateTime" name="username" />
+	<br />
+
+	Report Number
+	<br />
+	<input type="reportNum" name="password" />
+	<br />
+
+	Name of Reporter
+	<br />
+	<input type="reporterName" name="password" />
+	<br />
+
+	Location of Water
+	<br />
+	<input type="waterLocation" name="password" />
+	<br />
+
+	Type of Water
+	<br />
+	<input type="waterType" name="password" />
+	<br />
+
+	Condition of Water
+	<br />
+	<input type="waterCondition" name="password" />
+	<br />
+
+	<input type="submit" value = "Create Water Report" />
+</form>
